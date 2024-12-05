@@ -1,6 +1,6 @@
 function augmentingPath(graph, start, end) {
 
-    let vistited = [];
+    let visited = [];
     let path = [];
 
     //happen to start at the end node
@@ -9,13 +9,13 @@ function augmentingPath(graph, start, end) {
     }
 
     for(let node in graph){
-        vistited[node] = false;
+        visited[node] = false;
     }
 
     function backtrack(curNode){
 
         path.push(curNode);
-        vistited[curNode] = true;
+        visited[curNode] = true;
 
         if(curNode == end){
             return true;
@@ -24,7 +24,7 @@ function augmentingPath(graph, start, end) {
         for(let neighbor in graph[curNode]){
 
             //neighbor not visited
-            if(!vistited[neighbor]){
+            if(!visited[neighbor]){
 
                 //recurse on neighbor
                 if(backtrack(neighbor)){
@@ -48,3 +48,13 @@ function augmentingPath(graph, start, end) {
         return [];
     }
 }
+
+/*
+var graph = {'foo': {'boo': 7, 'd': 4},
+'boo': {'e': 3},
+'d': {'bar': 4},
+'e': {'foo': 1},
+'bar': {'foo': 2}};
+
+console.log(augmentingPath(graph, 'foo', 'bar'));
+*/
