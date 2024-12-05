@@ -46,4 +46,4 @@ answer, including your reasoning, to this markdown file.
 
 ### Answer:
 
-I believe the worst case scenario for this algorith would occur if it checked every single node and every one of the neighbors and could not find a path to the disired end node. In this case, it does all the work and comes back with the empty array, complexity wise, we have to iterate over every node (represnted by $|V|$ for vertice) and then every edge of the nodes would also be considered with the recursive logic which would just be $|E|$. Overall I believe that results a complexity of $\Theta(|V| + |E|)$.
+I believe the worst case scenario for this algorithm would occur if it checked every single node and every one of the neighbors and could not find a path to the disired end node. In this case, it does all the work and comes back with the empty array, complexity wise, we have to iterate over every node (represnted by $|V|$ for vertice) and then every edge of the nodes would also be considered with the recursive logic which would just be $|E|$. Overall I believe that results a complexity of $\Theta(|V| + |E|)$.
